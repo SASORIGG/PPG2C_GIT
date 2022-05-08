@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Users\73162\Desktop\c\ppg2c\ppg2c\ppg2c\main.c(53,23): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\73162\Desktop\c\ppg2c\ppg2c\ppg2c\main.c(60,30): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\73162\Desktop\c\ppg2c\ppg2c\ppg2c\main.c(25,12): warning C4101: “max”: 未引用的局部变量
+C:\Users\73162\Desktop\c\ppg2c\ppg2c\ppg2c\main.c(26,9): warning C4101: “size”: 未引用的局部变量
+  ppg2c.vcxproj -> C:\Users\73162\Desktop\c\ppg2c\ppg2c\Debug\ppg2c.exe

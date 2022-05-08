@@ -70,11 +70,11 @@ void c_abs(CPLX f[], double out[], int n)
     }
 }
 
-int findmax(double array[], int n)
+double findmax(double array[], int n)
 {
     double max = array[0];
     int i = 0;
-    int posNum = 0;
+    double posNum = 0;
     for (i = 0; i < n; i++)
     {
         if (max < array[i])
@@ -85,4 +85,31 @@ int findmax(double array[], int n)
     }
 
     return posNum;
+}
+
+void initial_estimate(CPLX buf[], double ppg[], int COUNT, double srate, double Y_N_prev[])
+{
+    double M, m;
+    CPLX EX[4096];
+    double EXout[4096];
+
+    shi2fu(buf, ppg, COUNT);
+    //对 buf 完成 COUNT点 的FFT，变换后仍为 buf
+    fft(buf, COUNT);
+    M = srate * 60 / COUNT;
+    m = floor(242 / M);
+    for (int i = 0; i < m; i++)
+    {
+        EX[i].real = buf[i].real;
+        EX[i].image = buf[i].image;
+    }
+    c_abs(EX, EXout, m);//复数数组取模，数组 EXout 为取模后的结果
+    //for (int i = 0; i < m; i++)
+    //{
+    //    printf("%d: ", i + 1);
+    //    printf("%.4f\n", EXout[i]);
+    //}
+    Y_N_prev[1] = findmax(EXout, m);
+    Y_N_prev[0] = (Y_N_prev[1] - 1) * M;
+
 }

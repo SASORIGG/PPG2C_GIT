@@ -1,4 +1,4 @@
-﻿  initial_estimate.c
-C:\Users\73162\Desktop\c\ppg2c_git\PPG2C_GIT\ppg2c\initial_estimate.c(106,23): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
-C:\Users\73162\Desktop\c\ppg2c_git\PPG2C_GIT\ppg2c\initial_estimate.c(112,35): warning C4244: “函数”: 从“double”转换到“int”，可能丢失数据
+﻿  data_preprocess.c
+C:\Users\73162\Desktop\c\ppg2c_git\PPG2C_GIT\ppg2c\data_preprocess.c(54,72): warning C4554: “|”: 检查运算符优先级是否存在的可能的错误；使用括号阐明优先级
+C:\Users\73162\Desktop\c\ppg2c_git\PPG2C_GIT\ppg2c\data_preprocess.c(59,77): warning C4554: “&”: 检查运算符优先级是否存在的可能的错误；使用括号阐明优先级
   ppg2c.vcxproj -> C:\Users\73162\Desktop\c\ppg2c_git\PPG2C_GIT\Debug\ppg2c.exe

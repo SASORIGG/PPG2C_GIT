@@ -21,9 +21,15 @@
     <ClCompile Include="initial_estimate.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="data_preprocess.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="initial_estimate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="data_preprocess.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -49,11 +49,11 @@ int fft(CPLX buf[], int n)
     return 1;
 }
 
-void shi2fu(CPLX buf[], double ppg[], int COUNT)
+void shi2fu(CPLX buf[], double PPG_final[], int COUNT)
 {
     for (int i = 0; i < COUNT; i++)
     {
-        buf[i].real = ppg[i];
+        buf[i].real = PPG_final[i];
         buf[i].image = 0;
     }
 }
@@ -87,13 +87,13 @@ double findmax(double array[], int n)
     return posNum;
 }
 
-void initial_estimate(CPLX buf[], double ppg[], int COUNT, double srate, double Y_N_prev[])
+void initial_estimate(CPLX buf[], double PPG_final[], int COUNT, double srate, double Y_N_prev[])
 {
     double M, m;
     CPLX EX[4096];
     double EXout[4096];
 
-    shi2fu(buf, ppg, COUNT);
+    shi2fu(buf, PPG_final, COUNT);
     //对 buf 完成 COUNT点 的FFT，变换后仍为 buf
     fft(buf, COUNT);
     M = srate * 60 / COUNT;

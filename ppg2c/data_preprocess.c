@@ -1,5 +1,5 @@
 #include "data_preprocess.h"
-
+#include <math.h>
 //¸´ÊýµÄ½»»» 
 void conjugate_complex(int n, CPLX in[], CPLX out[])
 {
@@ -87,13 +87,17 @@ void clean_up(CPLX buf[], double PPG1[], double srate, double PPG[])
 void data_preprocess(CPLX buf[], double PPG1[], double srate)
 {
 	double PPG[1000];
+	double PPG_sum = 0;
+	double PPG_norm = 0;
 	clean_up(buf, PPG1, srate, PPG);
 	//²âÊÔ
-	//for (int i = 0; i < 1000; i++)
-	//{
-	//	printf("%d: ", i + 1);
-	//	printf("%f\n", PPG[i]);
-	//}
-
+	for (int i = 0; i < 1000; i++)
+	{
+		printf("%d: ", i + 1);
+		printf("%f\n", PPG[i]);
+		PPG_sum = PPG_sum + PPG[i] * PPG[i];
+	}
+	PPG_norm = sqrt(PPG_sum);
+	printf("%f", PPG_norm);
 
 }

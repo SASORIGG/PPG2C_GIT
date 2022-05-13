@@ -1,4 +1,5 @@
-#include "data_preprocess.h"
+//#include "data_preprocess.h"
+#include "initial_estimate.h"
 #include <math.h>
 //¸´ÊýµÄ½»»» 
 void conjugate_complex(int n, CPLX in[], CPLX out[])

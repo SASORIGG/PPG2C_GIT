@@ -24,6 +24,9 @@
     <ClCompile Include="data_preprocess.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="bpmFft3.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="initial_estimate.h">

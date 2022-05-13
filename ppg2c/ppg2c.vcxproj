@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bpmFft3.c" />
     <ClCompile Include="data_preprocess.c" />
     <ClCompile Include="initial_estimate.c" />
     <ClCompile Include="main.c" />
